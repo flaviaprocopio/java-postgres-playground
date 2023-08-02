@@ -3,6 +3,7 @@ package com.example;
 public class Cliente {
     private String cpf;
     private String nome;
+    private String cidade;
     private double renda;
     private char sexo;
     private boolean especial;
@@ -39,6 +40,24 @@ public class Cliente {
         else this.nome = nome.toUpperCase().trim();
     }
 
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public double getRenda() {
+        return renda;
+    }
+    
+    public void setRenda (double renda) {
+        if(renda >= 0)
+            this.renda = renda;
+        else System.out.println("A renda deve ser maior ou igual a zero!");
+        }
+    
 
     public boolean isEspecial() {
         return especial;
@@ -66,14 +85,15 @@ public class Cliente {
 
     private int ano_nascimento;
 
-public double getRenda() {
-    return renda;
-}
-
-public void setRenda (double renda) {
-    if(renda >= 0)
-        this.renda = renda;
-    else System.out.println("A renda deve ser maior ou igual a zero!");
+    public double getRenda() {
+        return renda;
     }
+    
+    public void setRenda (double renda) {
+        if(renda >= 0)
+            this.renda = renda;
+        else System.out.println("A renda deve ser maior ou igual a zero!");
+        }
+    
 
 }

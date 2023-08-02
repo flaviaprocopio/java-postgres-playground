@@ -8,11 +8,13 @@ public class AppClasses {
         cliente.setAno_nascimento(1980);
         cliente.setNome("Flávia Procopio");
         cliente.setCpf("25119737234");
+        cliente.setCidade("Palmas");
 
         var vetorNome = cliente.getNome().split(" ");
         System.out.println(vetorNome [0]);
         System.out.println(vetorNome [1]);
 
+        System.out.println("Primeiro caractere do nome: " + cliente.getNome().charAt(0));
 
         System.out.println("Nome: " + cliente.getNome());
         System.out.println("Renda: " + cliente.getRenda());
@@ -24,11 +26,17 @@ public class AppClasses {
         cliente2.setNome("      ");
         //cliente2.setCpf(new String("25119737234"));
         cliente2.setCpf("88255144292");
+        cliente2.setCidade("PALMAS");
         System.out.println();
 
         if (cliente.getCpf().equals(cliente2.getCpf()))
         System.out.println("Cliente 1 e 2 têm o mesmo CPF");
         else System.out.println("CPFs Diferentes");
+
+        if (cliente.getCidade().equalsIgnoreCase(cliente2.getCidade()))
+        System.out.println("Cliente 1 e 2 moram na mesma Cidade");
+        else System.out.println("Cliente 1 e 2 moram em Cidades Diferentes");
+
 
         System.out.println();
         System.out.println("Nome: " + cliente2.getNome());
